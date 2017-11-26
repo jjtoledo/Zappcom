@@ -88,4 +88,5 @@
     <engine name="android" spec="~6.2.3" />
     <allow-navigation href="http://192.168.15.6:8100" />
     <allow-navigation href="http://192.168.56.1:8100" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.3.0" />
 </widget>

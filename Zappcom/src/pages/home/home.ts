@@ -25,7 +25,7 @@ export class HomePage {
     .catch(e => console.log(e));
   }
 
-  login() {
+  facebookLogin() {
 	  this.fb.login(['public_profile', 'user_friends', 'email'])
 	    .then(res => {
 	      if(res.status === "connected") {
@@ -38,7 +38,7 @@ export class HomePage {
 	    .catch(e => console.log('Error logging into Facebook', e));
 	}
 
-	logout() {
+	facebookLogout() {
 	  this.fb.logout()
 	    .then( res => this.isLoggedIn = false)
 	    .catch(e => console.log('Error logout from Facebook', e));
