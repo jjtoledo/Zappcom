@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="zappcom">
     <ion-title>
       Zappcom
     </ion-title>
@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="isLoggedIn; else facebookLogin">
+  <div *ngIf="isLoggedIn; else facebookDiv">
     <h2>Hi, {{users.name}} ({{users.email}})</h2>
     <p>
       Gender: {{users.gender}}
@@ -17,12 +17,20 @@
     </p>
   </div>
 
-  <ng-template #facebookLogin>
-    <button ion-button block icon-left (click)="login()">
+  <ng-template #facebookDiv>
+    <button ion-button block icon-left color="facebook" (click)="facebookLogin()">
       <ion-icon name="logo-facebook"></ion-icon>
-    </button>
+      Entrar com o Facebook
+    </button><br>
 
-	  <button ion-button block icon-left (click)="login()">
+	  <button ion-button block icon-left color="zappcom" (click)="login()">
+	    <ion-icon name="log-in"></ion-icon>
+	    Entrar com login e senha
+	  </button><br>
+
+	  <button ion-button block icon-left outline color="zappcom" (click)="cadastro()">
+	    <ion-icon name="person-add"></ion-icon>
+	    Não possui cadastro? Clique aqui
 	  </button>
   </ng-template>
 
